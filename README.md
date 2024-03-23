@@ -16,4 +16,4 @@
 ### <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_United_Kingdom.png" height="24"> Screenshot(s) / <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_Poland.png" height="24"> Zrzut(-y) ekranu
 
 `The appearance of the package may change. / Wygląd pakietu może ulec zmianie.`
-![](https://github.com/4IceG/Personal_data/blob/master/zrzuty/easyconfig-transfer-dev.png?raw=true)
+![](https://github.com/4IceG/Personal_data/blob/master/zrzuty/easyconfig-transfer-dev2.png?raw=true)
