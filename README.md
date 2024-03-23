@@ -10,7 +10,7 @@
 
 > Pakiet jest moją uproszczoną konwersją.   
 > Obecnie trwają prace nad pakietem.
-> Opublikuję go, kiedy będzie gotowy i znajdą się chętni na przetestowania go.
+> Opublikuję go, kiedy będzie gotowy i znajdą się chętni do testowania.
 
 
 ### <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_United_Kingdom.png" height="24"> Screenshot(s) / <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_Poland.png" height="24"> Zrzut(-y) ekranu
