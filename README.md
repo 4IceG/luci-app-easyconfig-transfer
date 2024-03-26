@@ -21,7 +21,15 @@
 ### <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_United_Kingdom.png" height="24"> Screenshot(s) / <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_Poland.png" height="24"> Zrzut(-y) ekranu
 
 `The appearance of the package may change. / Wygląd pakietu może ulec zmianie.`
-![](https://github.com/4IceG/Personal_data/blob/master/zrzuty/easyconfig-transfer-dev2.png?raw=true)
+
+> "Transfer statistics window / Okno statystyk transferu:
+
+![](https://github.com/4IceG/Personal_data/blob/master/zrzuty/luci-app-easyconfig-transfer1dev.png?raw=true)
+
+> "Configuration" window / Okno konfiguracji:
+
+![](https://github.com/4IceG/Personal_data/blob/master/zrzuty/luci-app-easyconfig-transfer2dev.png?raw=true)
+![](https://github.com/4IceG/Personal_data/blob/master/zrzuty/luci-app-easyconfig-transfer3dev.png?raw=true)
 
 ### <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_United_Kingdom.png" height="24"> Thanks to / <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_Poland.png" height="24"> Podziękowania dla
 - [obsy (Cezary Jackiewicz)](https://github.com/obsy)
