@@ -24,12 +24,12 @@
 
 > "Transfer statistics window / Okno statystyk transferu:
 
-![](https://github.com/4IceG/Personal_data/blob/master/zrzuty/luci-app-easyconfig-transfer1dev.png?raw=true)
+![](https://github.com/4IceG/Personal_data/blob/master/zrzuty/luci-app-easyconfig-transfer-dev1.png?raw=true)
 
 > "Configuration" window / Okno konfiguracji:
 
-![](https://github.com/4IceG/Personal_data/blob/master/zrzuty/luci-app-easyconfig-transfer2dev.png?raw=true)
-![](https://github.com/4IceG/Personal_data/blob/master/zrzuty/luci-app-easyconfig-transfer3dev.png?raw=true)
+![](https://github.com/4IceG/Personal_data/blob/master/zrzuty/luci-app-easyconfig-transfer-dev2.png?raw=true)
+![](https://github.com/4IceG/Personal_data/blob/master/zrzuty/luci-app-easyconfig-transfer-dev3.png?raw=true)
 
 ### <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_United_Kingdom.png" height="24"> Thanks to / <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_Poland.png" height="24"> Podziękowania dla
 - [obsy (Cezary Jackiewicz)](https://github.com/obsy)
