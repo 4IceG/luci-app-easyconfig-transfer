@@ -126,9 +126,13 @@ msgstr "Ustawienia ruchu"
 
 msgid "Traffic Settings"
 msgstr "Ustawienia ruchu"
-
-msgid "Select how often a compressed copy of the data will be made."
-msgstr "Wybierz co jaki czas będzie robiona skompresowana kopia danych."
+	
+msgid ""
+"Select how often a compressed copy of the data will be made. <br />Archive path <code>/etc/modem/easyconfig_statistics.json.gz</code>. <br /><br /><b>Important</b> <br />Please "
+"remember that frequent write operations shorten the life cycle of memory."
+msgstr ""
+"Wybierz co jaki czas będzie robiona skompresowana kopia danych. <br />Ścieżka do archiwum <code>/etc/modem/easyconfig_statistics.json.gz</code>. <br /><br /><b>Ważne</b> <br />Należy "
+"pamiętać że częste operacje zapisu skracają cykl życia pamięci."
 
 msgid "1 minute"
 msgstr "1 minutę"
@@ -205,7 +209,7 @@ msgstr "Podaj przedział wizualizacji/zliczania danych."
 msgid "Check this option if you want to save data during a scheduled device restart."
 msgstr "Zaznacz tą opcję jeżeli chcesz zachować dane przy zaplanowanym restarcie urządzenia."
 
-msgid "Back up at"
+msgid "Backup at"
 msgstr "Wykonaj kopię zapasową o godzinie"
 
 msgid "Restore backup at"
@@ -229,7 +233,7 @@ msgstr "Podaj wartość liczbową"
 msgid "Add a hostname"
 msgstr "Dodaj nazwę hosta"
 
-msgid "Enter data as <code>MAC Adress;Hostname</code>."
+msgid "Enter data as <code>MAC adress;Hostname</code>."
 msgstr "Wprowadź dane jako <code>Adres MAC;Nazwa hosta</code>."
 
 msgid "Transfer details"
@@ -256,8 +260,8 @@ msgstr "od"
 msgid "out of"
 msgstr "z"
 
-msgid "Enable transfer data collection."
-msgstr "Włącz zbieranie danych dotyczących transferu."
+msgid "Enable transfer data collection. <br />Data is saved to file <code>/tmp/easyconfig_statistics.json</code>."
+msgstr "Włącz zbieranie danych dotyczących transferu. <br />Dane zapisywane są do pliku <code>/tmp/easyconfig_statistics.json</code>."
 
 msgid "You have exceeded your available transfer by over"
 msgstr "Przekroczyłeś dostępny transfer o"
@@ -307,7 +311,7 @@ msgstr "Pobieranie pliku easyconfig_statistics.json nie powiodło się. Proszę 
 msgid "Error executing easyconfig_statistics.sh"
 msgstr "Błąd podczas wykonywania pliku easyconfig_statistics.sh"
 
-msgid "Upload archive .gz"
+msgid "Upload .gz archive"
 msgstr "Załaduj archiwum .gz"
 
 msgid "Upload .json file"

@@ -145,19 +145,19 @@ function lastPeriod(d) {
     const daysInMonth = new Date(year, month, 0).getDate();
     const daysInPreviousMonth = new Date(year, month - 1, 0).getDate();
 
-    let startDay = Math.min(d, daysInMonth);
+    var startDay = Math.min(d, daysInMonth);
     startDay = Math.max(1, startDay);
 
     const dates = [];
 
-    for (let i = startDay; i >= 1; i--) {
+    for (var i = startDay; i >= 1; i--) {
         const currentDay = i < 10 ? '0' + i : '' + i;
         const date = `${year}${month < 10 ? '0' + month : month}${currentDay}`;
         dates.push(date);
     }
 
     if (dates.length < daysInMonth && month > 1) {
-        for (let i = daysInPreviousMonth; dates.length < daysInMonth; i--) {
+        for (var i = daysInPreviousMonth; dates.length < daysInMonth; i--) {
             const currentDay = i < 10 ? '0' + i : '' + i;
             const date = `${year}${month - 1 < 10 ? '0' + (month - 1) : month - 1}${currentDay}`;
             dates.push(date);
@@ -221,7 +221,8 @@ return view.extend({
 			{
 			fs.write('/tmp/easyconfig_statistics.json', '{}');
 			fs.exec_direct('/bin/lock', [ '-u' , '/var/lock/easyconfig_statistics.lock' ]);
-			//fs.remove('/etc/modem/easyconfig_statistics.json.gz');
+			fs.remove('/etc/modem/easyconfig_statistics.json.gz');
+			fs.exec('sleep 2');
 			fs.remove('/etc/modem/easyconfig_statistics.json');
 		}
 
@@ -247,9 +248,11 @@ return view.extend({
 			fs.exec_direct('/bin/lock', [ '-u' , '/var/lock/easyconfig_statistics.lock' ]);
 			//fs.remove('/etc/modem/easyconfig_statistics.json.gz');
 			fs.exec('sleep 2');
-			fs.remove('/etc/modem/easyconfig_statistics.json');
+			fs.remove('/tmp/easyconfig_statistics.json');
 			fs.exec('sleep 2');
 			fs.exec_direct('/bin/cp', [ '/etc/modem/easyconfig_statistics.json' , '/tmp' ]);
+			fs.exec('sleep 2');
+			fs.remove('/etc/modem/easyconfig_statistics.json');
 		}
 	},
 

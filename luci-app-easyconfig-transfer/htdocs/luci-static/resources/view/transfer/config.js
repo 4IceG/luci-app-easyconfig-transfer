@@ -99,7 +99,7 @@ return view.extend({
 		s = m.section(form.TypedSection, 'ectransfer', _('Main Settings'), null);
 		s.anonymous = true;
 
-		o = s.option(form.Flag, 'transfer_enabled', _('Enable'), _('Enable transfer data collection.'));
+		o = s.option(form.Flag, 'transfer_enabled', _('Enable'), _('Enable transfer data collection. <br />Data is saved to file <code>/tmp/easyconfig_statistics.json</code>.'));
 		o.rmempty = false;
 		o.write = function(section_id, value) {
 			if(value == '1') {
@@ -132,7 +132,11 @@ return view.extend({
 		o.default = '10';
 		//o.depends('transfer_enabled', '1');
 
-		o = s.option(form.ListValue, 'datarec_period', _('Data recording period'), _('Select how often a compressed copy of the data will be made.'));
+		o = s.option(form.ListValue, 'datarec_period', _('Data recording period'),
+			 _('Select how often a compressed copy of the data will be made. <br />Archive path <code>/etc/modem/easyconfig_statistics.json.gz</code>. \
+				<br /><br /><b>Important</b> \
+				<br />Please remember that frequent write operations shorten the life cycle of memory.'));
+
 		o.value('0', _('Disabled'));
 		o.value('1', _('1 minute'));
 		o.value('2', _('3 minutes'));
@@ -170,7 +174,7 @@ return view.extend({
 		o = s.taboption('trTab', form.Flag, 'wan_view', _('Show wan in table'), _('Check this option if you want wan to be visible in the table.'));
 		o.rmempty = false;
 
-		o = s.taboption('trTab', form.DynamicList, 'host_names', _('Add a hostname'), _('Enter data as <code>MAC Adress;Hostname</code>.'));
+		o = s.taboption('trTab', form.DynamicList, 'host_names', _('Add a hostname'), _('Enter data as <code>MAC adress;Hostname</code>.'));
 		o.rmempty = true;
 		o.validate = function(section_id, value) {
 			if(value === "" || value.match(/^([0-9A-F]{2}:){5}([0-9A-F]{2});.+$/)) {
@@ -212,7 +216,7 @@ return view.extend({
 
 		o = s.taboption('bkTab', form.Button, 'restore', _('Restore .json file from archive'), _('Option allows user to restore statistics from the archive.'));
 		o.inputstyle = 'action important';
-		o.inputtitle = _('Upload archive .gz');
+		o.inputtitle = _('Upload .gz archive');
 		o.onclick = L.bind(this.handleRestoreGZ, this);
 
 		o = s.taboption('bkTab', form.Button, 'restore', _('Restore .json file'), _('Option allows user to restore statistics from .json file.'));
@@ -272,7 +276,7 @@ return view.extend({
 		};
 		//o.depends('transfer_enabled', '1');
 
-		o = s.taboption('bkTab', form.Value, 'make_time', _('Back up at'), _("Correct time format <code>HH:MM</code>."));
+		o = s.taboption('bkTab', form.Value, 'make_time', _('Backup at'), _("Correct time format <code>HH:MM</code>."));
 		o.rmempty = true;
 		//o.depends('transfer_enabled', '1');
 		o.validate = function(section_id, value) {
