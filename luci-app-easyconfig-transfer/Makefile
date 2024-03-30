@@ -10,8 +10,8 @@ PKG_NAME:=luci-app-easyconfig-transfer
 LUCI_TITLE:=LuCI JS Support for easyconfig transfer statistics
 MAINTAINER:=Rafał Wabik <4Rafal@gmail.com>
 LUCI_DESCRIPTION:=LuCI JS interface for the easyconfig transfer statistics.
-LUCI_DEPENDS:=+gzip
-PKG_VERSION:=1.0.4-20240327
+LUCI_DEPENDS:=
+PKG_VERSION:=1.0.5-20240330
 LUCI_PKGARCH:=all
 
 
