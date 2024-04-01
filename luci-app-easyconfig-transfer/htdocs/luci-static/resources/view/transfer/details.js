@@ -412,14 +412,14 @@ return view.extend({
 					var traffic_currentperiod_progress = ' (' + percent + '% ' + _('out of') + ' ' + bytesToSize(traffic_limit) + ')';
 					if (percent > 100) {
 						var percent = 100;
-						estatus = bytesToSize((traffic_total - traffic_limit));
+						estatus = bytesToSize((traffic_currentperiod - traffic_limit));
 						ui.addNotification(null, E('p', _('You have exceeded your available transfer by over')+' '+estatus), 'error');
 						poll.stop();
-						var traffic_total = traffic_limit;
+						var traffic_currentperiod = traffic_limit;
 					}
                         		var view = document.getElementById("idtraffic_currentperiod");
                         		view.innerHTML = ntraffic_currentperiod + ' ' + traffic_currentperiod_progress;
-					pdata_bar(traffic_total, traffic_limit, true);
+					pdata_bar(traffic_currentperiod, traffic_limit, true);
 					var viewbar = document.getElementById('idtraffic_currentperiod_progress');
 					viewbar.style.display = "block";
 					document.getElementById('idtraffic_currentperiod_progress').classList.remove('hidden');
@@ -429,14 +429,14 @@ return view.extend({
 					var traffic_today_progress = ' (' + percent + '% ' + _('out of') + ' ' + bytesToSize(traffic_limit) + ')';
 					if (percent > 100) {
 						var percent = 100;
-						estatus = bytesToSize((traffic_total - traffic_limit));
+						estatus = bytesToSize((traffic_today - traffic_limit));
 						ui.addNotification(null, E('p', _('You have exceeded your available transfer by over')+' '+estatus), 'error');
 						poll.stop();
-						var traffic_total = traffic_limit;
+						var traffic_today = traffic_limit;
 					}
                         		var view = document.getElementById("idtraffic_currentperiod");
                         		view.innerHTML = ntraffic_currentperiod + ' ' + traffic_today_progress;
-					tdata_bar(traffic_total, traffic_limit, true);
+					tdata_bar(traffic_today, traffic_limit, true);
 					var viewbar = document.getElementById('idtraffic_today_progress');
 					viewbar.style.display = "block";
 					document.getElementById('idtraffic_today_progress').classList.remove('hidden');
@@ -476,8 +476,12 @@ return view.extend({
                         view.innerHTML = ntraffic_lastperiod;
 
                         var view = document.getElementById("idremaining_transfer");
-                        view.innerHTML = bytesToSize(traffic_limit - traffic_total) + ' (' + _('approximately remains') + ' ' + bytesToSize((traffic_limit - traffic_total) / diffdays) + ' ' + _('per day') + ')';
-
+			if (data_traffic_warning_cycle == 'p') {
+			view.innerHTML = diffdays > 0 ? bytesToSize(traffic_limit - traffic_currentperiod) + ' (' + _('approximately remains') + ' ' + bytesToSize((traffic_limit - traffic_currentperiod) / diffdays) + ' ' + _('per day') + ')' : bytesToSize(traffic_limit - traffic_currentperiod);
+			}
+			if (data_traffic_warning_cycle == 'd') {
+                        view.innerHTML = bytesToSize(traffic_limit - traffic_today);
+			}
 
 			var rows = [];
 			var sortedData = [];
