@@ -6,12 +6,11 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=luci-app-easyconfig-transfer
 LUCI_TITLE:=LuCI JS Support for easyconfig transfer statistics
 MAINTAINER:=Rafał Wabik <4Rafal@gmail.com>
 LUCI_DESCRIPTION:=LuCI JS interface for the easyconfig transfer statistics.
 LUCI_DEPENDS:=
-PKG_VERSION:=1.0.6-20240401
+PKG_VERSION:=1.0.7-20240427
 LUCI_PKGARCH:=all
 
 

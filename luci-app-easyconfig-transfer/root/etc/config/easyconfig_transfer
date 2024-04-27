@@ -12,5 +12,5 @@ config service 'traffic'
 	option warning_value '100'
 	option warning_unit 'g'
 	option warning_cycle 'p'
-
+	option zero_view '1'
 

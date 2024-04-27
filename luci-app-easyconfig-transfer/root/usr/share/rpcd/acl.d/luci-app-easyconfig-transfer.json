@@ -5,7 +5,8 @@
 		   	"cgi-io": [ "exec" ],
 			"cgi-io": [ "download" ],
 			"ubus": {
-				"luci-rpc": [ "getDHCPLeases" ]
+				"luci-rpc": [ "getDHCPLeases" ],
+				"file": [ "read" ]
 			},
     			"file": {
 				"/bin/cp": [ "exec" ],
@@ -21,9 +22,6 @@
 				"/etc/modem/easyconfig_statistics.json": [ "read" ],
 				"/var/lock/easyconfig_statistics.lock": [ "read" ],
 				"/etc/config/easyconfig_transfer": [ "read" ]
-			},
-			"ubus": {
-				"file": [ "read" ]
 			},
 			"uci": [ "easyconfig_transfer" ]
 		},

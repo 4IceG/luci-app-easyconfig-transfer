@@ -292,6 +292,7 @@ return view.extend({
 			var usage_bar_view = sections[1].warning_enabled;
 			var hidden_data_value = sections[1].hidden_data;
 			var wan_view = sections[1].wan_view;
+			var zero_view = sections[1].zero_view;
 			var mac_list = Array.isArray(sections[1].host_names) ? sections[1].host_names : [];
 
 			var macs_list = [];
@@ -487,6 +488,7 @@ return view.extend({
 			var sortedData = [];
 
 			var includeWan = wan_view;
+			var hideZeros = zero_view;
 			var leases = Array.isArray(stat[0].dhcp_leases) ? stat[0].dhcp_leases : [];
 
 			for (var mac in jsonData) {
@@ -538,15 +540,16 @@ return view.extend({
 					}
     				}
 			}
-			
-        	sortedData.push({
-            		mac: modifiedMac,
-            		dhcpname: dhcpname,
-            		first_seen: formatDateTime(deviceData.first_seen) || '-',
-            		last_seen: formatDateTime(deviceData.last_seen) || '-',
-            		totalTX: totalTX,
-            		totalRX: totalRX
-        		});
+		if ((hideZeros == "1" && totalTX > 0 && totalRX > 0) || (hideZeros == "0")) {	
+        		sortedData.push({
+            			mac: modifiedMac,
+            			dhcpname: dhcpname,
+            			first_seen: formatDateTime(deviceData.first_seen) || '-',
+            			last_seen: formatDateTime(deviceData.last_seen) || '-',
+            			totalTX: totalTX,
+            			totalRX: totalRX
+        			});
+			}
     		}
 }
 
@@ -580,6 +583,7 @@ return view.extend({
         		bytesToSize(device.totalRX)
     			]);
 		}
+		
 
 }
 

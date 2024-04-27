@@ -126,6 +126,12 @@ msgstr "Ustawienia ruchu"
 
 msgid "Traffic Settings"
 msgstr "Ustawienia ruchu"
+
+msgid "Hide MAC addresses"
+msgstr "Ukryj adresy MAC"
+
+msgid "Hide MAC addresses without transfer information."
+msgstr "Ukryj adresy MAC bez danych o transferze."
 	
 msgid ""
 "Select how often a compressed copy of the data will be made. <br />Archive path <code>/etc/modem/easyconfig_statistics.json.gz</code>. <br /><br /><b>Important</b> <br />Please "
@@ -133,6 +139,14 @@ msgid ""
 msgstr ""
 "Wybierz co jaki czas będzie robiona skompresowana kopia danych. <br />Ścieżka do archiwum <code>/etc/modem/easyconfig_statistics.json.gz</code>. <br /><br /><b>Ważne</b> <br />Należy "
 "pamiętać że częste operacje zapisu skracają cykl życia pamięci."
+
+msgid ""
+"Enable transfer data collection. <br />Data is saved to file <code>/tmp/easyconfig_statistics.json</code>. <br /><br /><b>What you should know</b> <br />With "
+"flow offloading enabled, transfer data will be inconsistent with reality or may be completely unavailable."
+
+msgstr ""
+"Włącz zbieranie danych dotyczących transferu. <br />Dane zapisywane są do pliku <code>/tmp/easyconfig_statistics.json</code>. <br /><br /><b>Co powinieneś wiedzieć</b> <br />Przy "
+"włączonym flow offloadingu, dane dotyczące transferu będą niezgodne z rzeczywistością lub mogą być całkowicie niedostępne."
 
 msgid "1 minute"
 msgstr "1 minutę"
@@ -259,9 +273,6 @@ msgstr "od"
 
 msgid "out of"
 msgstr "z"
-
-msgid "Enable transfer data collection. <br />Data is saved to file <code>/tmp/easyconfig_statistics.json</code>."
-msgstr "Włącz zbieranie danych dotyczących transferu. <br />Dane zapisywane są do pliku <code>/tmp/easyconfig_statistics.json</code>."
 
 msgid "You have exceeded your available transfer by over"
 msgstr "Przekroczyłeś dostępny transfer o"

@@ -99,7 +99,10 @@ return view.extend({
 		s = m.section(form.TypedSection, 'ectransfer', _('Main Settings'), null);
 		s.anonymous = true;
 
-		o = s.option(form.Flag, 'transfer_enabled', _('Enable'), _('Enable transfer data collection. <br />Data is saved to file <code>/tmp/easyconfig_statistics.json</code>.'));
+		o = s.option(form.Flag, 'transfer_enabled', _('Enable'), _('Enable transfer data collection. <br />Data is saved to file <code>/tmp/easyconfig_statistics.json</code>. \
+				<br /><br /><b>What you should know</b> \
+				<br />With flow offloading enabled, transfer data will be inconsistent with reality or may be completely unavailable.'));
+
 		o.rmempty = false;
 		o.write = function(section_id, value) {
 			if(value == '1') {
@@ -170,6 +173,10 @@ return view.extend({
 		o.value('h', _('Hostnames'));
 		o.value('mh', _('MAC addresses & Hostnames'));
 		o.rmempty = false;
+
+		o = s.taboption('trTab', form.Flag, 'zero_view', _('Hide MAC addresses'), _('Hide MAC addresses without transfer information.'));
+		o.rmempty = false;
+		o.default = '1';
 
 		o = s.taboption('trTab', form.Flag, 'wan_view', _('Show wan in table'), _('Check this option if you want wan to be visible in the table.'));
 		o.rmempty = false;
