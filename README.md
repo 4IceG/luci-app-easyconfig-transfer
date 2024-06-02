@@ -8,14 +8,14 @@
 #### <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_United_Kingdom.png" height="24"> Transfer statistics from easyconfig available in LuCI JS. More information on <https://eko.one.pl/?p=easyconfig>.
 
 > Package is my simplified conversion.   
-> Currently, work on the package is in progress.
-> I will publish it when it is ready and there are people willing to test it.
+> This is a development version and not everything may work 100% correctly.
+> I have published package, but fixes will definitely appear.
 
 #### <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_Poland.png" height="24"> Statystyki transferu z easyconfig dostępne w LuCI JS. Więcej informacji na <https://eko.one.pl/?p=easyconfig>.
 
 > Pakiet jest moją uproszczoną konwersją.   
-> Obecnie trwają prace nad pakietem.
-> Opublikuję go, kiedy będzie gotowy i znajdą się chętni do testowania.
+> To jest wersja rozwojowa i nie wszystko może działać w 100% poprawnie.
+> Opublikowałem pakiet, ale poprawki na pewno się pojawią.
 
 
 ### <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_United_Kingdom.png" height="24"> Screenshot(s) / <img src="https://raw.githubusercontent.com/4IceG/Personal_data/master/dooffy_design_icons_EU_flags_Poland.png" height="24"> Zrzut(-y) ekranu
