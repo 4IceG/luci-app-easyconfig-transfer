@@ -24,7 +24,7 @@
 
 > "Transfer statistics window / Okno statystyk transferu:
 
-![](https://github.com/4IceG/Personal_data/blob/master/zrzuty/luci-app-easyconfig-transfer-dev107a.png?raw=true)
+![](https://github.com/4IceG/Personal_data/blob/master/zrzuty/luci-app-easyconfig-transfer-dev115a.png?raw=true)
 
 > "Configuration" window / Okno konfiguracji:
 
