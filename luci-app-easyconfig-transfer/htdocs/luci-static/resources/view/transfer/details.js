@@ -10,7 +10,7 @@
 'require request';
 
 /*
-	Copyright (c) 2024 Rafał Wabik - IceG - From eko.one.pl forum
+	Copyright (c) 2024-2025 Rafał Wabik - IceG - From eko.one.pl forum
 	
 	Licensed to the GNU General Public License v3.0.
 	
@@ -224,7 +224,6 @@ function drawPieChart(container, data, title) {
 			this.setAttribute('stroke-width', '3');
 			this.style.filter = 'brightness(1.1)';
 			
-			// ODWRÓCONE: pod etykietą "Downloaded" pokazujemy uploaded, a pod "Uploaded" – downloaded
 			var downloadedBytes = item.uploaded || 0;
 			var uploadedBytes = item.downloaded || 0;
 			
@@ -412,8 +411,6 @@ function sortClientObjectsByHeader(tableKey) {
 			});
 		}
 	} else {
-		// PO ZMIANIE: kol.4 (Uploaded) sortujemy po dBytes (bo wyświetlamy tam Downloaded),
-		// a kol.5 (Downloaded) sortujemy po uBytes (bo wyświetlamy tam Uploaded)
 		if (col === 4) {
 			out.sort(function(a,b) { 
 				return asc ? (a.dBytes - b.dBytes) : (b.dBytes - a.dBytes);
@@ -458,7 +455,6 @@ function renderClientTableManual(table, tableKey) {
 			var tr = E('tr', { 'class': 'tr cbi-rowstyle-%d'.format(i % 2 ? 2 : 1) }, [
 				E('td', { 'class': 'td', 'data-title': _('Date') }, o.dateLabel),
 				(function(){ 
-					// ZAMIANA: najpierw Downloaded
 					var td = E('td', { 'class': 'td', 'data-title': _('Downloaded') }, bytesToSize(o.dBytes)); 
 					td.dataset.bytes = String(o.dBytes||0); 
 					return td; 
@@ -484,13 +480,11 @@ function renderClientTableManual(table, tableKey) {
 				E('td', { 'class': 'td', 'data-title': _('First Seen')  }, o.first),
 				E('td', { 'class': 'td', 'data-title': _('Last Seen')   }, o.last),
 				(function(){ 
-					// PO ZMIANIE: w kolumnie "Uploaded" wyświetlamy Downloaded (dBytes)
 					var td = E('td', { 'class': 'td', 'data-title': _('Uploaded')   }, bytesToSize(o.dBytes)); 
 					td.dataset.bytes = String(o.dBytes||0); 
 					return td; 
 				})(),
 				(function(){ 
-					// PO ZMIANIE: w kolumnie "Downloaded" wyświetlamy Uploaded (uBytes)
 					var td = E('td', { 'class': 'td', 'data-title': _('Downloaded') }, bytesToSize(o.uBytes)); 
 					td.dataset.bytes = String(o.uBytes||0); 
 					return td; 
@@ -1305,7 +1299,6 @@ function drawStaticGraph(svg, rxSeries, txSeries, scaleText, labelsX, jsonData, 
 					'<div style="font-weight:bold; margin-bottom:8px; border-bottom:1px solid var(--border-color-low, rgba(0,0,0,0.2)); padding-bottom:5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">' + label + '</div>';
 
 				if (top3) {
-					// ODWRÓCONE: ▼ pokazuje Top 3 Uploaded, ▲ pokazuje Top 3 Downloaded
 					if (top3.uploaded && top3.uploaded.length > 0) {
 						tooltipContent += '<div style="margin-bottom:6px; margin-top:4px;"><strong style="font-size:11px;">▼ Top 3</strong></div>';
 						top3.uploaded.forEach(function(client, iTop){
