@@ -388,7 +388,6 @@ function sortClientObjectsByHeader(tableKey) {
 	var out = objs.slice();
 
 	if (tableKey === 'client-usage-history') {
-		// ZAMIANA: kol.1 sortuje po dBytes (Downloaded), kol.2 po uBytes (Uploaded)
 		if (col === 1) {
 			out.sort(function(a,b) { 
 				return asc ? (a.dBytes - b.dBytes) : (b.dBytes - a.dBytes);
