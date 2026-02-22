@@ -1,5 +1,5 @@
 #
-# Copyright 2024-2025 Rafał Wabik - IceG - From eko.one.pl forum
+# Copyright 2024-2026 Rafał Wabik - IceG - From eko.one.pl forum
 #
 # Licensed to the GNU General Public License v3.0.
 #
@@ -10,8 +10,8 @@ LUCI_TITLE:=LuCI JS Support for easyconfig transfer statistics
 PKG_MAINTAINER:=Rafał Wabik <4Rafal@gmail.com>
 LUCI_DESCRIPTION:=LuCI JS interface for the easyconfig transfer statistics.
 LUCI_DEPENDS:=+luci-base
-PKG_VERSION:=1.0.16
-PKG_RELEASE:=20251111
+PKG_VERSION:=1.0.18
+PKG_RELEASE:=20260222
 LUCI_PKGARCH:=all
 
 
